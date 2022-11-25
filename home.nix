@@ -1,12 +1,12 @@
 { config, pkgs, lib, ... }:
 
 {
+  fonts.fontconfig.enable = true;
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "eric.ottosson";
   home.homeDirectory = "/Users/eric.ottosson";
-
-  fonts.fontconfig.enable = true;
 
   # Packages that should be installed to the user profile.
   home.packages = pkgs.callPackage ./packages.nix {};
@@ -20,6 +20,12 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "22.05";
+
+  home.sessionPath = [ "$HOME/go/bin" ];
+
+  home.sessionVariables = {
+    EDITOR = "emacs";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -45,6 +51,8 @@
 
     userName = "Eric Ottosson";
   };
+
+  programs.go.enable = true;
 
   programs.kitty = {
     enable = true;
