@@ -9,9 +9,13 @@ in {
     specialArgs = { inherit user inputs; };
     modules = [
       ({ pkgs, ... }: {
-        nixpkgs.overlays = [
-          inputs.emacs-overlay.overlays.emacs
-          inputs.emacs-overlay.overlays.package
+        nixpkgs.overlays = with inputs; [
+          emacs-overlay.overlays.emacs
+          emacs-overlay.overlays.package
+
+          # TODO: Move back to official pkg once this is merged
+          #       https://nixpk.gs/pr-tracker.html?pr=203504
+          (self: super: { yabai-5_0_2 = (import nixpkgs-yabai-5_0_2 { inherit system; }).yabai; })
         ];
       })
 

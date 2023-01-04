@@ -1,6 +1,11 @@
 { config, pkgs, user, ... }:
 
 {
+  imports = [
+    ./modules/yabai.nix
+    ./modules/skhd.nix
+  ];
+
   users.users."${user}" = {
     home = "/Users/${user}";
     shell = pkgs.zsh;
@@ -49,20 +54,21 @@
 
   programs.zsh.enable = true;
 
-  system = {
-    defaults = {
-      NSGlobalDomain = {
-        NSAutomaticCapitalizationEnabled = false;
-        NSAutomaticSpellingCorrectionEnabled = false;
-      };
-      dock = {
-        autohide = false;
-        orientation = "left";
-      };
+  system.defaults = {
+    NSGlobalDomain = {
+      NSAutomaticCapitalizationEnabled = false;
+      NSAutomaticSpellingCorrectionEnabled = false;
     };
-
-    # Used for backwards compatibility, please read the changelog before changing.
-    # $ darwin-rebuild changelog
-    stateVersion = 4;
+    dock = {
+      autohide = true;
+      mru-spaces = false;
+    };
+    finder = {
+      _FXShowPosixPathInTitle = true;
+    };
   };
+
+  # Used for backwards compatibility, please read the changelog before changing.
+  # $ darwin-rebuild changelog
+  system.stateVersion = 4;
 }
