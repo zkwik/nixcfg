@@ -1,12 +1,11 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [];
+  imports = [
+    ./modules/emacs.nix
+  ];
 
-  programs.emacs = {
-    enable = true;
-    package = pkgs.emacsGit;
-  };
+  home.packages = with pkgs; [];
 
   programs.git = {
     enable = true;

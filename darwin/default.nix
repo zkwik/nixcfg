@@ -8,7 +8,12 @@ in {
     inherit system;
     specialArgs = { inherit user inputs; };
     modules = [
-      ({ pkgs, ... }: { nixpkgs.overlays = [ inputs.emacs-overlay.overlays.emacs ]; })
+      ({ pkgs, ... }: {
+        nixpkgs.overlays = [
+          inputs.emacs-overlay.overlays.emacs
+          inputs.emacs-overlay.overlays.package
+        ];
+      })
 
       ./configuration.nix
 
