@@ -30,7 +30,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "Iosevka";
+      name = "Cascadia Code";
       size = 13;
     };
     theme = "Doom One";

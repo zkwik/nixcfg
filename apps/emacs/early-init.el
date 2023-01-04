@@ -44,7 +44,7 @@
 (setq frame-inhibit-implied-resize t)
 
 ;; Set default font.
-(push '(font . "Iosevka") default-frame-alist)
-(set-face-attribute 'default nil :family "Iosevka" :height 130 :weight 'semi-light)
+(push '(font . "Cascadia Code") default-frame-alist)
+(set-face-attribute 'default nil :family "Cascadia Code" :height 130 :weight 'regular)
 
 ;;; early-init.el ends here

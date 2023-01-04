@@ -16,6 +16,7 @@
   fonts = {
     fontDir.enable = true;
     fonts = with pkgs; [
+      cascadia-code
       iosevka
     ];
   };
