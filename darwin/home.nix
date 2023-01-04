@@ -31,6 +31,10 @@
     enable = true;
   };
 
+  programs.java = {
+    enable = true;
+  };
+
   programs.kitty = {
     enable = true;
     font = {
