@@ -13,8 +13,7 @@
       alt - f : yabai -m window --toggle zoom-fullscreen
 
       # float / unfloat window and center on screen
-      alt - t : yabai -m window --toggle float;\
-                yabai -m window --grid 4:4:1:1:2:2
+      alt - t : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
 
       # close focused window
       alt - q : yabai -m window --close
@@ -33,12 +32,6 @@
       shift + alt - j : yabai -m window --swap south
       shift + alt - k : yabai -m window --swap north
       shift + alt - l : yabai -m window --swap east
-
-      # resize window
-      shift + cmd - h : yabai -m window --resize left:50:0
-      shift + cmd - j : yabai -m window --resize bottom:0:50
-      shift + cmd - k : yabai -m window --resize top:0:50
-      shift + cmd - l : yabai -m window --resize right:50:0
 
       # focus space
       ctrl - 1 : yabai -m space --focus 1

@@ -56,6 +56,7 @@
 
   system.defaults = {
     NSGlobalDomain = {
+      _HIHideMenuBar = true;
       NSAutomaticCapitalizationEnabled = false;
       NSAutomaticSpellingCorrectionEnabled = false;
     };
