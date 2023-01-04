@@ -11,7 +11,7 @@ in {
     });
   };
 
-  home.file.".emacs.d/init.el".source = mkOutOfStoreSymlink ../../apps/emacs/init.el;
-  home.file.".emacs.d/early-init.el".source = mkOutOfStoreSymlink ../../apps/emacs/early-init.el;  
-  home.file.".emacs.d/settings.el".source = mkOutOfStoreSymlink ../../apps/emacs/settings.el;
+  home.file.".emacs.d/init.el".source = mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/apps/emacs/init.el";
+  home.file.".emacs.d/early-init.el".source = mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/apps/emacs/early-init.el";
+  home.file.".emacs.d/settings.el".source = mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/apps/emacs/settings.el";
 }
