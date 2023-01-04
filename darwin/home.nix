@@ -27,6 +27,19 @@
     enableSyntaxHighlighting = true;
   };
 
+  programs.kitty = {
+    enable = true;
+    font = {
+      name = "Iosevka";
+      size = 13;
+    };
+    theme = "Doom One";
+    settings = {
+      hide_window_decorations = "titlebar-only";
+      window_padding_width = 10;
+    };
+  };
+
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards

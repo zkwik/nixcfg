@@ -7,7 +7,7 @@
 
     skhdConfig = ''
       # open terminal
-      cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+      cmd - return : ~/Applications/Home\ Manager\ Apps/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 
       # toggle window fullscreen
       alt - f : yabai -m window --toggle zoom-fullscreen
