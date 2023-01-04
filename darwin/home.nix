@@ -27,6 +27,10 @@
     enableSyntaxHighlighting = true;
   };
 
+  programs.go = {
+    enable = true;
+  };
+
   programs.kitty = {
     enable = true;
     font = {
