@@ -24,9 +24,6 @@
       alt - k : yabai -m window --focus north
       alt - l : yabai -m window --focus east
 
-      cmd - j : yabai -m window --focus prev
-      cmd - k : yabai -m window --focus next
-
       # swap window
       shift + alt - h : yabai -m window --swap west
       shift + alt - j : yabai -m window --swap south
@@ -46,6 +43,11 @@
       shift + ctrl - 3 : yabai -m window --space 3; yabai -m space --focus 3
       shift + ctrl - 4 : yabai -m window --space 4; yabai -m space --focus 4
       shift + ctrl - 5 : yabai -m window --space 5; yabai -m space --focus 5
+
+      # media keys
+      play : spt playback --toggle
+      previous : spt playback --previous
+      next : spt playback --next
     '';
   };
 
