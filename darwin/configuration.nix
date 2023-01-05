@@ -45,6 +45,14 @@
       "alfred"
       "docker"
     ];
+
+    masApps = {
+      "Vimari" = 1480933944;
+      "Noir – Dark Mode for Safari" = 1592917505;
+      "Vinegar - Tube Cleaner" = 1591303229;
+      "Baking Soda - Tube Cleaner" = 1591303229;
+      "Wipr" = 1320666476;
+    };
   };
 
   nix = {
