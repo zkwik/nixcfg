@@ -23,13 +23,29 @@
 
   environment = {
     shells = with pkgs; [ zsh ];
-    systemPackages = with pkgs; [
-      emacs
-      git
-    ];
+    systemPackages = with pkgs; [ ];
   };
 
   services.nix-daemon.enable = true;
+
+  homebrew = {
+    enable = true;
+    onActivation.autoUpdate = true;
+    onActivation.cleanup = "zap";
+    global.brewfile = true;
+
+    taps = [
+      "homebrew/core"
+      "homebrew/cask"
+    ];
+
+    casks = [
+      "1password"
+      "1password/tap/1password-cli"
+      "alfred"
+      "docker"
+    ];
+  };
 
   nix = {
     package = pkgs.nix;

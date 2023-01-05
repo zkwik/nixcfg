@@ -5,7 +5,11 @@
     ./modules/emacs.nix
   ];
 
-  home.packages = with pkgs; [];
+  home.packages = with pkgs; [
+    jq
+    slack
+    spotify-tui
+  ];
 
   programs.git = {
     enable = true;
@@ -45,6 +49,15 @@
     settings = {
       hide_window_decorations = "titlebar-only";
       window_padding_width = 10;
+
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "*" = {
+        extraOptions = {
+          IdentityAgent = "~/.1password/agent.sock";
+        };
+      };
     };
   };
 

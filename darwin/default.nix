@@ -9,6 +9,8 @@ in {
     specialArgs = { inherit user inputs; };
     modules = [
       ({ pkgs, ... }: {
+        nixpkgs.config.allowUnfree = true;
+
         nixpkgs.overlays = with inputs; [
           emacs-overlay.overlays.emacs
           emacs-overlay.overlays.package
