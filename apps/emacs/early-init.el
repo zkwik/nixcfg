@@ -43,6 +43,10 @@
 ;; system default can cause frame resizing, which adds to startup time.
 (setq frame-inhibit-implied-resize t)
 
+;; Add window transparency.
+(set-frame-parameter (selected-frame) 'alpha 95)
+(add-to-list 'default-frame-alist '(alpha . 95))
+
 ;; Set default font.
 (push '(font . "Cascadia Code") default-frame-alist)
 (set-face-attribute 'default nil :family "Cascadia Code" :height 130 :weight 'regular)

@@ -9,9 +9,11 @@
  '(cursor-type 'hollow)
  '(custom-enabled-themes '(zenburn))
  '(custom-file "~/.emacs.d/settings.el")
+ '(custom-safe-themes
+   '("02f57ef0a20b7f61adce51445b68b2a7e832648ce2e7efb19d217b6454c1b644" default))
  '(display-line-numbers t)
  '(global-hl-line-mode t)
- '(go-mode-hook '(eglot-ensure))
+ '(go-mode-hook '(eglot-ensure) t)
  '(indent-tabs-mode nil)
  '(initial-buffer-choice t)
  '(org-agenda-files (list org-directory))
