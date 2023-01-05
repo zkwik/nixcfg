@@ -85,7 +85,10 @@
 
   system.defaults = {
     NSGlobalDomain = {
-      _HIHideMenuBar = true;
+      AppleShowAllFiles = true;
+      AppleShowAllExtensions = true;
+      AppleShowScrollBars = "WhenScrolling";
+      AppleInterfaceStyle = "Dark";
       NSAutomaticCapitalizationEnabled = false;
       NSAutomaticSpellingCorrectionEnabled = false;
     };
@@ -94,6 +97,7 @@
       mru-spaces = false;
     };
     finder = {
+      FXPreferredViewStyle = "Nlsv";
       _FXShowPosixPathInTitle = true;
     };
   };

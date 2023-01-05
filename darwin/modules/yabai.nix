@@ -11,7 +11,7 @@
       auto_balance = "off";
       split_ratio = "0.50";
       window_border = "on";
-      window_border_width = "2";
+      window_border_width = "3";
       window_placement = "second_child";
       window_shadow = "float";
       active_window_border_color = "0xff9a84ba";
@@ -20,11 +20,11 @@
       normal_window_opacity = "1.0";
       focus_follows_mouse = "autoraise";
       mouse_follows_focus = "off";
-      top_padding = "10";
-      bottom_padding = "10";
-      left_padding = "10";
-      right_padding = "10";
-      window_gap = "10";
+      top_padding = "20";
+      bottom_padding = "20";
+      left_padding = "20";
+      right_padding = "20";
+      window_gap = "20";
     };
 
     extraConfig = ''

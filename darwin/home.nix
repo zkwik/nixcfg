@@ -29,6 +29,11 @@
     enable = true;
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
+
+    shellAliases = {
+      ls = "ls -G";
+      sptr = "launchctl kickstart -k gui/502/org.nixos.spotifyd";
+    };
   };
 
   programs.go = {
@@ -48,7 +53,12 @@
     theme = "Doom One";
     settings = {
       hide_window_decorations = "titlebar-only";
-      window_padding_width = 10;
+      window_padding_width = 20;
+      tab_bar_margin_width = 20;
+      background_opacity = "0.95";
+      macos_thicken_font = "0.50";
+    };
+  };
 
   programs.ssh = {
     enable = true;
