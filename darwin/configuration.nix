@@ -71,6 +71,18 @@
 
   programs.zsh.enable = true;
 
+  services.spotifyd = {
+    enable = true;
+    settings = {
+      username = "ericottosson";
+      password_cmd = "op item get Spotify --fields label=password";
+      bitrate = 320;
+      volume_normalisation = true;
+      device_name = "${config.networking.hostName}";
+      device_type = "computer";
+    };
+  };
+
   system.defaults = {
     NSGlobalDomain = {
       _HIHideMenuBar = true;
