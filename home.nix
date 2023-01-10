@@ -42,7 +42,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "Cascadia Code";
+      name = "Iosevka";
       size = 13;
     };
     theme = "Modus Vivendi";
@@ -50,7 +50,6 @@
       hide_window_decorations = "titlebar-only";
       window_padding_width = 20;
       tab_bar_margin_width = 20;
-      background_opacity = "0.95";
       macos_thicken_font = "0.50";
     };
   };
