@@ -7,7 +7,13 @@
 
     skhdConfig = ''
       # open terminal
-      cmd - return : ~/Applications/Home\ Manager\ Apps/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+      cmd - return : kitty --single-instance -d ~
+
+      # open emacs
+      ctrl + alt + cmd - e : emacs
+
+      # reload yabai
+      ctrl + alt + cmd - r : launchctl kickstart -k "gui/''${UID}/org.nixos.yabai"
 
       # toggle window fullscreen
       alt - f : yabai -m window --toggle zoom-fullscreen
