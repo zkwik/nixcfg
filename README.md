@@ -1,2 +1,2 @@
-# nixos-config
+# darwin-config
 My personal Darwin configuration
