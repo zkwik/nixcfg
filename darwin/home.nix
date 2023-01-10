@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./modules/emacs.nix
+    ./modules/emacs
   ];
 
   home.packages = with pkgs; [

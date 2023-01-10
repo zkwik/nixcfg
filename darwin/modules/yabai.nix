@@ -31,7 +31,6 @@
       yabai -m rule --add app='System Preferences' manage=off border=off layer=above
       yabai -m rule --add app='Activity Monitor' manage=off border=off layer=above
       yabai -m rule --add app='Finder' manage=off border=off layer=above
-      yabai -m rule --add app='^Emacs$' manage=on
     '';
   };
 }
