@@ -50,7 +50,7 @@
       name = "Cascadia Code";
       size = 13;
     };
-    theme = "Doom One";
+    theme = "Modus Vivendi";
     settings = {
       hide_window_decorations = "titlebar-only";
       window_padding_width = 20;
