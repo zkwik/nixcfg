@@ -5,10 +5,10 @@
     enable = true;
     package = pkgs.emacsUnstable.overrideAttrs (o: {
       patches = (o.patches or [ ]) ++ [
-        ./patches/no-titlebar-and-round-corners.patch
-        ./patches/no-frame-refocus-cocoa.patch
-        ./patches/fix-window-role.patch
-        ./patches/system-appearance.patch
+        ./emacs/no-titlebar-and-round-corners.patch
+        ./emacs/no-frame-refocus-cocoa.patch
+        ./emacs/fix-window-role.patch
+        ./emacs/system-appearance.patch
       ];
     });
   };

@@ -5,7 +5,7 @@
     ./modules/yabai.nix
     ./modules/skhd.nix
   ];
-
+  
   users.users."${user}" = {
     home = "/Users/${user}";
     shell = pkgs.zsh;
@@ -28,6 +28,7 @@
 
   services.nix-daemon.enable = true;
 
+  # TODO: Migrate remaining casks to nixpkgs when available/possible.
   homebrew = {
     enable = true;
     onActivation.autoUpdate = true;
@@ -44,6 +45,7 @@
       "1password/tap/1password-cli"
       "alfred"
       "docker"
+      "slack"
     ];
 
     masApps = {
@@ -52,28 +54,6 @@
       "Vinegar - Tube Cleaner" = 1591303229;
       "Baking Soda - Tube Cleaner" = 1591303229;
       "Wipr" = 1320666476;
-    };
-  };
-
-  nix = {
-    package = pkgs.nix;
-    gc = {
-      automatic = true;
-      interval.Day = 7;
-      options = "--delete-older-than 7d";
-    };
-    extraOptions = ''
-      auto-optimise-store = true
-      experimental-features = nix-command flakes
-    '';
-    settings = {
-      trusted-users = [ "root" "${user}" ];
-      substituters = [
-        "https://nix-community.cachix.org"
-      ];
-      trusted-public-keys = [
-        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      ];
     };
   };
 
@@ -92,24 +72,14 @@
   };
 
   system.defaults = {
-    NSGlobalDomain = {
-      AppleShowAllFiles = true;
-      AppleShowAllExtensions = true;
-      AppleShowScrollBars = "WhenScrolling";
-      AppleInterfaceStyle = "Dark";
-      NSAutomaticCapitalizationEnabled = false;
-      NSAutomaticSpellingCorrectionEnabled = false;
-    };
     dock = {
       autohide = true;
       mru-spaces = false;
     };
-    finder = {
-      FXPreferredViewStyle = "Nlsv";
-      _FXShowPosixPathInTitle = true;
-    };
   };
 
+  nix.settings.trusted-users = [ "root" "${user}" ];
+  
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;

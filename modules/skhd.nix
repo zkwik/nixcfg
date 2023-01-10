@@ -21,7 +21,7 @@
       # float / unfloat window and center on screen
       alt - t : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
 
-      # close focused window
+n      # close focused window
       alt - q : yabai -m window --close
 
       # focus window

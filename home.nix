@@ -2,12 +2,11 @@
 
 {
   imports = [
-    ./modules/emacs
+    ./modules/emacs.nix
   ];
 
   home.packages = with pkgs; [
     jq
-    slack
     spotify-tui
   ];
 
@@ -36,13 +35,9 @@
     };
   };
 
-  programs.go = {
-    enable = true;
-  };
+  programs.go.enable = true;
 
-  programs.java = {
-    enable = true;
-  };
+  programs.java.enable = true;
 
   programs.kitty = {
     enable = true;
